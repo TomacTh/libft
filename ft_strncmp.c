@@ -6,7 +6,7 @@
 /*   By: tombanks <tombanks@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 20:42:39 by tcharvet          #+#    #+#             */
-/*   Updated: 2020/12/01 21:40:12 by tombanks         ###   ########.fr       */
+/*   Updated: 2020/12/02 14:47:24 by tombanks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	if(!n)
 		return (0);
 	while (*(unsigned char*)s1 == *(unsigned char*)s2 &&
-	*(unsigned char*)s1 && *(unsigned char*)s2 && --n > 0)
+	*(unsigned char*)s1 && *(unsigned char*)s2 && --n)
 	{
 		s1++;
 		s2++;
