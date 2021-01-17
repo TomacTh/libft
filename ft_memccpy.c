@@ -6,7 +6,7 @@
 /*   By: tombanks <tombanks@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 20:50:33 by tcharvet          #+#    #+#             */
-/*   Updated: 2020/11/28 20:51:52 by tombanks         ###   ########.fr       */
+/*   Updated: 2021/01/04 21:56:03 by tombanks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,5 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		if(*(unsigned char*)(src - 1) == (unsigned char)c)
 			return (dest);
 	}
-	
 	return (0);
 }

@@ -29,6 +29,7 @@ char *ft_strtrim(char const *s1, char const *set)
         y--;
     if(!(str = malloc(y - i + 2)))
         return (0);
+    copy = str;
     while(i <= y)
     {    
         *str = ((char *)s1)[i];
