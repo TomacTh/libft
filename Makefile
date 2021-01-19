@@ -1,3 +1,4 @@
+
 CC=			gcc
 
 AR=			ar
@@ -24,8 +25,6 @@ OBJ=		$(SRC:.c=.o)
 
 OBJBONUS= 	$(SRCBONUS:.c=.o)
 
-INCLUDE=	libft.h
-
 all:		$(NAME)
 
 $(NAME):	$(OBJ)
@@ -35,7 +34,7 @@ bonus:		$(OBJBONUS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJBONUS)	
 
 %.o:		%.c
-	$(CC) -I ${INCLUDE} -c $(CFLAGS) -o $@ $<
+	$(CC) -c $(CFLAGS) -o $@ $<
 
 clean:
 	rm -f $(OBJ) $(OBJBONUS)
@@ -46,4 +45,3 @@ fclean:		clean
 re:			fclean all
 
 .PHONY:	all bonus clean fclean re
-
