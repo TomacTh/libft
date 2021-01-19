@@ -6,21 +6,21 @@
 /*   By: tombanks <tombanks@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 20:50:33 by tcharvet          #+#    #+#             */
-/*   Updated: 2021/01/04 21:56:03 by tombanks         ###   ########.fr       */
+/*   Updated: 2021/01/19 13:24:49 by tcharvet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/libft.h"
+#include <string.h>
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	while (*(unsigned char*)src && n-- > 0)
-	{	
-		*(unsigned char *)dest = *(unsigned char *)src;
+	while (n-- > 0)
+	{
+		*(unsigned char *)dst = *(unsigned char *)src;
 		src++;
-		dest++;
-		if(*(unsigned char*)(src - 1) == (unsigned char)c)
-			return (dest);
+		dst++;
+		if (*(unsigned char*)(src - 1) == (unsigned char)c)
+			return (dst);
 	}
 	return (0);
 }

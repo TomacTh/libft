@@ -3,35 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tombanks <tombanks@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tcharvet <tcharvet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/28 20:37:41 by tcharvet          #+#    #+#             */
-/*   Updated: 2020/12/01 20:20:10 by tombanks         ###   ########.fr       */
+/*   Created: 2021/01/18 15:38:20 by tcharvet          #+#    #+#             */
+/*   Updated: 2021/01/18 15:38:29 by tcharvet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/libft.h"
+#include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_atoi(const char *str)
 {
 	int num;
 	int sign;
 
 	num = 0;
 	sign = 1;
-	while ((*(char*)nptr >= '\t' && *(char*)nptr <= '\r')
-	|| *(char*)nptr == ' ')
-		nptr++;
-	if (*(char*)nptr == '+' || *(char*)nptr == '-')
+	while ((*(char*)str >= '\t' && *(char*)str <= '\r')
+	|| *(char*)str == ' ')
+		str++;
+	if (*(char*)str == '+' || *(char*)str == '-')
 	{
-		if (*(char*)nptr == '-')
+		if (*(char*)str == '-')
 			sign = -1;
-		nptr++;
+		str++;
 	}
-	while (*(char*)nptr >= '0' && *(char*)nptr <= '9')
+	while (*(char*)str >= '0' && *(char*)str <= '9')
 	{
-		num = num * 10 + (*(char*)nptr - '0');
-		nptr++;
+		num = num * 10 + (*(char*)str - '0');
+		str++;
 	}
 	return (num * sign);
 }

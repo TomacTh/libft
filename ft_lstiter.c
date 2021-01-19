@@ -1,8 +1,20 @@
-#include "./includes/libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tcharvet <tcharvet@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/18 14:14:50 by tcharvet          #+#    #+#             */
+/*   Updated: 2021/01/18 16:16:24 by tcharvet         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
-{	
-	while(lst && f)
+#include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	while (lst && f)
 	{
 		(*f)(lst->content);
 		lst = lst->next;

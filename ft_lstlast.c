@@ -1,8 +1,20 @@
-#include "./includes/libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tcharvet <tcharvet@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/18 14:15:04 by tcharvet          #+#    #+#             */
+/*   Updated: 2021/01/19 15:14:18 by tcharvet         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while(lst && lst->next)
+	while (lst && lst->next)
 		lst = lst->next;
 	return (lst);
 }

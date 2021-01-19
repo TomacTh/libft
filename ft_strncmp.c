@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tombanks <tombanks@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tcharvet <tcharvet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/28 20:42:39 by tcharvet          #+#    #+#             */
-/*   Updated: 2020/12/02 14:47:24 by tombanks         ###   ########.fr       */
+/*   Created: 2021/01/18 15:44:05 by tcharvet          #+#    #+#             */
+/*   Updated: 2021/01/19 15:31:45 by tcharvet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/libft.h"
+#include <string.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
-{	
-	if(!n)
+{
+	if (!n)
 		return (0);
 	while (*(unsigned char*)s1 == *(unsigned char*)s2 &&
 	*(unsigned char*)s1 && *(unsigned char*)s2 && --n)
