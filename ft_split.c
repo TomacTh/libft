@@ -6,7 +6,7 @@
 /*   By: tcharvet <tcharvet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 14:18:38 by tcharvet          #+#    #+#             */
-/*   Updated: 2021/01/19 12:02:15 by tcharvet         ###   ########.fr       */
+/*   Updated: 2021/01/27 23:03:08 by tcharvet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ static unsigned int	count_words(char *s, char c)
 	count = 0;
 	while (*s)
 	{
-		if ((*(char *)s != c))
+		if ((*s != c))
 		{
 			count++;
-			while (*(char *)s && *(char *)s != c)
+			while (*s && *s != c)
 				s++;
 		}
 		else

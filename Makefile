@@ -35,7 +35,8 @@ bonus:		$(OBJBONUS)
 
 %.o:		%.c
 	$(CC) -c $(CFLAGS) -o $@ $<
-
+so:
+	$(CC) -shared -o libft.so $(OBJ) ${OBJBONUS}
 clean:
 	rm -f $(OBJ) $(OBJBONUS)
 
@@ -44,4 +45,4 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:	all bonus clean fclean re
+.PHONY:	all bonus clean fclean re so
